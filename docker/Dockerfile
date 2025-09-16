@@ -49,11 +49,12 @@ RUN chown -R app:app /home/app /var/app
 
 COPY requirements.txt /var/app/requirements.txt
 
-# Upgrade pip, setuptools, and wheel
+# Upgrade python tools and install dependencies
 RUN pip install --upgrade pip setuptools wheel; \
     pip install --no-cache-dir ipython==9.5.0; \
     pip install --no-cache-dir pip-tools==7.5.0; \
-    pip install --no-cache-dir ipdb; \
+    pip install --no-cache-dir ipdb==0.13.13; \
+    pip install --no-cache-dir uv==0.8.17; \
     pip install --no-cache-dir -r requirements.txt
 
 ### App setup #################################################################
