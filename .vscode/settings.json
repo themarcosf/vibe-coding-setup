@@ -1,0 +1,8 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "files.insertFinalNewline": false,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
+}

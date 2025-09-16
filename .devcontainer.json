@@ -1,0 +1,32 @@
+{
+    "name": "sample-devcontainer",
+    "build": {
+        "dockerfile": "./docker/Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "workspaceFolder": "/var/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/var/app,type=bind,consistency=cached",
+    "remoteUser": "app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mechatroner.pip-requirements",
+                "ms-azuretools.vscode-containers",
+                "ms-python.python"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python3",
+                "files.associations": {
+                    "requirements.txt": "pip-requirements",
+                    "requirements.in": "pip-requirements"
+                }
+            }
+        }
+    },
+    "runArgs": [
+        "--rm"
+    ]
+}
