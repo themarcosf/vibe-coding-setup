@@ -23,6 +23,17 @@
                     "requirements.txt": "pip-requirements",
                     "requirements.in": "pip-requirements"
                 }
+            },
+            "mcp": {
+                "servers": {
+                    "sequentialthinking": {
+                        "command": "npx",
+                        "args": [
+                            "-y",
+                            "@modelcontextprotocol/server-sequential-thinking"
+                        ]
+                    }
+                }
             }
         }
     },
