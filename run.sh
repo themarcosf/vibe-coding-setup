@@ -24,7 +24,8 @@ OPTIONS:
     ./run.sh --run --tickers AAPL,MSFT --initial-cash 50000 --show-reasoning
 
 ENVIRONMENT VARIABLES:
-    OPENAI_API_KEY                  Required. The OpenAI API key for additional features.
+    API_KEY                         Required. The api key for [...]
+    SANDBOX_MODE                    Optional. The sandbox mode (1 or 0). Default is 0.
 EOF
 }
 
